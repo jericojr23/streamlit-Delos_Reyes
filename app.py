@@ -17,7 +17,6 @@ st.write("CPE 019-CPE32S6 - Emerging Technologies 2 in CpE")
 st.write("Final Exam: Model Deployment in the Cloud")
 st.write(
         """
-        The training is done on this IPYNB file: https://drive.google.com/file/d/1VEwA5ICuzPYLfi-LfEh6TARDPJ6zIW0G/view?usp=sharing
 
         Select images to upload on this link: https://drive.google.com/drive/folders/16dEDVexhQd8pHusJLGhChmVW9wCqWdq7?usp=sharing
         """
@@ -66,6 +65,8 @@ else:
 st.write(
         """
         Github Repository: https://github.com/jericojr23/streamlit-Delos_Reyes.git
+
         
+        The training is done on this IPYNB file: https://drive.google.com/file/d/1VEwA5ICuzPYLfi-LfEh6TARDPJ6zIW0G/view?usp=sharing
         """
     )
