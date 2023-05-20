@@ -1,1 +1,1 @@
-# Streamlit Sample App
+# Streamlit Malaria Cell Image Classification App
