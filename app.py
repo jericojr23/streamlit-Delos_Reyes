@@ -4,7 +4,7 @@ import tensorflow as tf
 @st.cache_resource
 def load_model():
     tf.keras.backend.clear_session()  # Clear the TensorFlow graph
-    model = tf.keras.models.load_model('newer_newer_model.h5')
+    model = tf.keras.models.load_model('newer_newer_model_final.h5')
     return model
 
 model = load_model()
