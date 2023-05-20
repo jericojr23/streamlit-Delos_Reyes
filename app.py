@@ -7,12 +7,22 @@ import numpy as np
 @st.cache_resource
 def load_model():
     tf.keras.backend.clear_session()  # Clear the TensorFlow graph
-    model = tf.keras.models.load_model('newer_newer_model_improved_improved.h5')
+    model = tf.keras.models.load_model('old_newer_newer_model_improved_improved.h5')
     return model
 
 model = load_model()
 
 st.title("Malaria Cell Image Classification by Jerico Delos Reyes")
+st.write("CPE 019-CPE32S6 - Emerging Technologies 2 in CpE")
+st.write("Final Exam: Model Deployment in the Cloud")
+st.write(
+        """
+        The training is done on this IPYNB file: https://drive.google.com/file/d/1VEwA5ICuzPYLfi-LfEh6TARDPJ6zIW0G/view?usp=sharing
+        
+        Select images to upload on this link: https://drive.google.com/drive/folders/16dEDVexhQd8pHusJLGhChmVW9wCqWdq7?usp=sharing
+        """
+    )
+
 
 file = st.file_uploader("Choose plant photo from computer", type=["jpg", "png"])
 
