@@ -23,6 +23,12 @@ st.write(
         """
     )
 
+st.write(
+        """
+        The goal of Malaria Cell Image Classification is to create a CNN model that accurately categorizes microscopic blood cell pictures as infected or uninfected, automating the diagnosis of malaria. This improves efficiency, makes early diagnosis possible, and lessens the need for manual examination, which eventually results in timely treatment and improved healthcare outcomes.
+        """
+    )
+
 
 file = st.file_uploader("Choose photo from computer", type=["jpg", "png"])
 
