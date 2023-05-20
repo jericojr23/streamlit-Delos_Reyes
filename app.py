@@ -29,6 +29,16 @@ import cv2
 from PIL import Image, ImageOps
 import numpy as np
 
+import cv2
+from PIL import Image, ImageOps
+import numpy as np
+import tensorflow as tf
+
+import cv2
+from PIL import Image, ImageOps
+import numpy as np
+import tensorflow as tf
+
 def import_and_predict(image_data, model):
     size = (128, 128)
     
@@ -46,10 +56,21 @@ def import_and_predict(image_data, model):
     
     # Reshape the image to match the input shape of the model
     img_reshape = img_reshape.reshape((1,) + img_reshape.shape)
-
-    # Make predictions using the Keras model
-    prediction = model.predict(img_reshape)
+    
+    # Clear the previous TensorFlow graph
+    tf.keras.backend.clear_session()
+    
+    # Create a new TensorFlow graph
+    graph = tf.Graph()
+    
+    with graph.as_default():
+        # Load the model within the new graph
+        with tf.Session(graph=graph):
+            # Make predictions using the Keras model
+            prediction = model.predict(img_reshape)
+    
     return prediction
+
 
 
 
