@@ -57,3 +57,9 @@ else:
     string2= "Kindly take note that this model is not entirely precise."
     st.success(string1)
     st.success(string2)
+st.write(
+        """
+        Github Repository: https://github.com/jericojr23/streamlit-Delos_Reyes.git
+        
+        """
+    )
