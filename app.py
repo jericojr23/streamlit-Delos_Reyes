@@ -12,7 +12,7 @@ def load_model():
 
 model = load_model()
 
-st.write("# Malaria Cell Image Classification by Jerico Delos Reyes")
+st.title("Malaria Cell Image Classification by Jerico Delos Reyes")
 
 file = st.file_uploader("Choose plant photo from computer", type=["jpg", "png"])
 
@@ -43,5 +43,7 @@ else:
     st.image(image, use_column_width=True)
     prediction = import_and_predict(image, model)
     class_names = ['Parasitized', 'Uninfected']
-    string = "OUTPUT: " + class_names[np.argmax(prediction)]
-    st.success(string)
+    string1 = "The cell is " + class_names[np.argmax(prediction)] + "."
+    string2= "Kindly take note that this model is not entirely precise."
+    st.success(string1)
+    st.success(string2)
