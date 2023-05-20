@@ -4,10 +4,10 @@ import cv2
 from PIL import Image, ImageOps
 import numpy as np
 
-@st.cache(allow_output_mutation=True)
+@st.cache_resource
 def load_model():
     tf.keras.backend.clear_session()  # Clear the TensorFlow graph
-    model = tf.keras.models.load_model('newer_newer_model.h5')
+    model = tf.keras.models.load_model('newer_newer_model_improved_improved.h5')
     return model
 
 model = load_model()
